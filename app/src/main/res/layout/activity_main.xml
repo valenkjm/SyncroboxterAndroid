@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#090d13"
+    android:padding="12dp">
+
+    <!-- Status bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#111820"
+        android:padding="10dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Desconectado"
+            android:textColor="#4dabf7"
+            android:textSize="12sp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/tvLastSync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Último sync: nunca"
+            android:textColor="#5c7080"
+            android:textSize="10sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- Log area -->
+    <ScrollView
+        android:id="@+id/scrollLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#050810"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#cdd9e5"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="3dp"
+            android:text="[00:00:00] Syncroboxter Android iniciado.\n[00:00:00] Configurá el servidor en ⚙ Ajustes." />
+    </ScrollView>
+
+    <!-- Progress bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp"
+        android:visibility="gone"
+        android:id="@+id/progressContainer">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_weight="1"
+            android:progressTint="#4dabf7"
+            android:progressBackgroundTint="#1f2d3d"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#4dabf7"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Conectar"
+            android:textColor="#090d13"
+            android:backgroundTint="#4dabf7"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="monospace"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnSync"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="⟳ Sincronizar"
+            android:textColor="#090d13"
+            android:backgroundTint="#40c057"
+            android:enabled="false"
+            android:fontFamily="monospace"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>
