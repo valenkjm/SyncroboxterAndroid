@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Syncroboxter" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#4dabf7</item>
+        <item name="colorPrimaryVariant">#111820</item>
+        <item name="colorOnPrimary">#090d13</item>
+        <item name="colorSecondary">#40c057</item>
+        <item name="android:colorBackground">#090d13</item>
+        <item name="android:statusBarColor">#111820</item>
+    </style>
+</resources>
