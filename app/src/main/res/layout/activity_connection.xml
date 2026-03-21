@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090d13">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Modo de conexión -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MODO DE CONEXIÓN"
+            android:textColor="#5c7080"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/rgMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbWifi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📶 WiFi"
+                android:textColor="#cdd9e5"
+                android:buttonTint="#4dabf7" />
+
+            <RadioButton
+                android:id="@+id/rbBluetooth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔵 Bluetooth"
+                android:textColor="#cdd9e5"
+                android:buttonTint="#4dabf7" />
+
+            <RadioButton
+                android:id="@+id/rbInternet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🌐 Internet"
+                android:textColor="#cdd9e5"
+                android:buttonTint="#4dabf7" />
+        </RadioGroup>
+
+        <!-- Host -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="HOST / IP DEL SERVIDOR" android:textColor="#5c7080"
+            android:textSize="11sp" android:fontFamily="monospace" android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etHost"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="192.168.1.100"
+            android:textColor="#cdd9e5"
+            android:textColorHint="#5c7080"
+            android:background="#111820"
+            android:padding="12dp"
+            android:fontFamily="monospace"
+            android:inputType="textUri"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Puerto -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="PUERTO" android:textColor="#5c7080"
+            android:textSize="11sp" android:fontFamily="monospace" android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etPort"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="54321"
+            android:textColor="#cdd9e5"
+            android:textColorHint="#5c7080"
+            android:background="#111820"
+            android:padding="12dp"
+            android:fontFamily="monospace"
+            android:inputType="number"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Clave -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="CLAVE DE ACCESO" android:textColor="#5c7080"
+            android:textSize="11sp" android:fontFamily="monospace" android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etSecret"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="SYNCROBOXTER_ANDROID_KEY"
+            android:textColor="#cdd9e5"
+            android:textColorHint="#5c7080"
+            android:background="#111820"
+            android:padding="12dp"
+            android:fontFamily="monospace"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Carpeta local -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="CARPETA LOCAL (en el celular)" android:textColor="#5c7080"
+            android:textSize="11sp" android:fontFamily="monospace" android:layout_marginBottom="4dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/etLocalFolder"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:hint="Seleccioná una carpeta..."
+                android:textColor="#cdd9e5"
+                android:textColorHint="#5c7080"
+                android:background="#111820"
+                android:padding="12dp"
+                android:fontFamily="monospace"
+                android:focusable="false" />
+            <Button
+                android:id="@+id/btnPickFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:text="📂"
+                android:backgroundTint="#1f2d3d"
+                android:textColor="#4dabf7"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- Test -->
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔌 Probar conexión"
+            android:backgroundTint="#1f2d3d"
+            android:textColor="#4dabf7"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvTestResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#69db7c"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:background="#050810"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Guardar -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="💾 Guardar configuración"
+            android:backgroundTint="#4dabf7"
+            android:textColor="#090d13"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
