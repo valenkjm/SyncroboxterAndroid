@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#090d13">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#111820"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="↑ Subir"
+            android:backgroundTint="#1f2d3d"
+            android:textColor="#4dabf7"
+            android:textSize="12sp"
+            android:enabled="false"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvPath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="/"
+            android:textColor="#5c7080"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:ellipsize="start"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvFiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#1f2d3d"
+        android:dividerHeight="1dp"
+        android:background="#090d13"
+        android:listSelector="#111820" />
+</LinearLayout>
