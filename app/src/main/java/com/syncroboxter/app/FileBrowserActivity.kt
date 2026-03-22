@@ -50,7 +50,8 @@ class FileBrowserActivity : AppCompatActivity() {
 
         lvFiles.setOnItemClickListener { _, _, pos, _ ->
             val item = (lvFiles.adapter as ArrayAdapter<String>).getItem(pos) ?: return@setOnItemClickListener
-            val file = File(currentPath, item.trimStart('📁', '📄', ' '))
+            val name = item.removePrefix("📁 ").removePrefix("📄 ").trim()
+            val file = File(currentPath, name)
             if (file.isDirectory) {
                 pathStack.addLast(currentPath!!)
                 currentPath = file
